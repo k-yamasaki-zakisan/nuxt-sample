@@ -111,18 +111,21 @@ export default {
       // @ts-ignore
       if (this.content != "") {
         // @ts-ignore
-        this.$store.commit("insert", { content: this.content });
+        this.$store.dispatch("insert", { content: this.content });
+        // this.$store.commit("insert", { content: this.content });
         // @ts-ignore
         this.content = "";
       }
     },
     remove(todo: any): void {
       // @ts-ignore
-      this.$store.commit("remove", todo);
+      this.$store.dispatch("remove", todo);
+      //this.$store.commit("remove", todo);
     },
     changeState(todo: any): void {
       // @ts-ignore
-      this.$store.commit("changeState", todo);
+      this.$store.dispatch("changeState", todo);
+      //this.$store.commit("changeState", todo);
     },
     find(findState: string): void {
       // @ts-ignore

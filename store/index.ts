@@ -59,6 +59,17 @@ const createStore = () => {
                 }
             }
         },
+        actions: {
+            insert(context, obj) {
+                context.commit('insert', obj);
+            },
+            remove(context, todo) {
+                context.commit('remove', todo);
+            },
+            changeState(context, todo) {
+                context.commit('changeState', todo);
+            }
+        }
     })
 }
 
